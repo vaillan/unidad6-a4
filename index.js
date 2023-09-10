@@ -4,6 +4,7 @@ import './style.css';
 //Variables globales
 let lista = [19, 37, 29, 18, 19, 34, 24, 16, 17, 37, 37];
 let moda = 0;
+
 /**
  * Calcula frecuencia de un valor en una lista
  * @param {array} items
@@ -31,7 +32,7 @@ function carcularFrecuencia(items) {
 }
 
 /**
- * Filtra el array para obtener elementos unicos
+ * Filtra un array con elemntos duplicados para obtener elementos unicos
  * @returns {array}
  */
 function filter(_lista) {
@@ -54,14 +55,14 @@ function filter(_lista) {
  * @param {object} object
  * @returns {number}
  */
-function obtenerModa(object) {
+function getModa(object) {
   const arrayResult = Object.values(object);
   return Math.max(...arrayResult);
 }
 
 
 function onInit() {
-  moda = obtenerModa(carcularFrecuencia(lista));
+  moda = getModa(carcularFrecuencia(lista));
   setAlert();
 }
 
